@@ -4,6 +4,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local React = require(ReplicatedStorage.Packages.React)
 local ReactRoblox = require(ReplicatedStorage.Packages.ReactRoblox)
 
+local RootUI = require(ReplicatedStorage.Shared.app.RootUI)
+
 return function()
 	local player = Players.LocalPlayer
 	local playerGui = player.PlayerGui
@@ -17,6 +19,6 @@ return function()
 	container.Parent = playerGui
 
 	local root = ReactRoblox.createRoot(container)
-	local app = React.createElement(...)
+	local app = React.createElement(RootUI)
 	root:render(app)
 end
