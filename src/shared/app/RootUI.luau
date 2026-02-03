@@ -4,7 +4,10 @@ local Menu = require(script.Parent.Menu)
 local React = require(ReplicatedStorage.Packages.React)
 
 local function RootUI()
-	return React.createElement(Menu)
+	return React.createElement(Menu, {
+		Color = Color3.fromRGB(0, 128, 255),
+		Text = "Custom Menu!",
+	})
 end
 
 return RootUI

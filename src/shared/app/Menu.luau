@@ -3,8 +3,14 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local React = require(ReplicatedStorage.Packages.React)
 local e = React.createElement
 
-local function Menu()
+type MenuProps = {
+	Color: Color3,
+	Text: string,
+}
+
+local function Menu(props: MenuProps)
 	return e("Frame", {
+		BackgroundColor3 = props.Color,
 		AnchorPoint = Vector2.new(0.5, 0.5),
 		Position = UDim2.fromScale(0.5, 0.5),
 		Size = UDim2.fromScale(0.5, 0.5),
@@ -17,7 +23,7 @@ local function Menu()
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.fromScale(0.5, 0.5),
 			Size = UDim2.fromScale(1, 0.25),
-			Text = "Hello World!",
+			Text = props.Text,
 			TextColor3 = Color3.fromRGB(255, 255, 255),
 			TextScaled = true,
 		}),
