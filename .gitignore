@@ -12,3 +12,20 @@ profile.svg
 
 # Time trace
 trace.json
+
+# Project place file
+/game.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# Packages
+Packages
+ServerPackages
+node_modules
+
+sourcemap.json
+
+wally.lock
+
